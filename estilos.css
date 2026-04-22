@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos para as ligazóns*/
+a {
+    outline: none;
+    text-decoration: underline;
+    color: #302e2b;
+    font-size: 12px;
+    
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #302e2b;
+    font-size: 14px; 
+    line-height: 2;
+}
+
+
+
+ /*Estilos texto*/
+ h1 {
+    font-size: 56px;
+    line-height: 120px;
+   
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 2;
+  }
+  h4 {
+    letter-spacing: 1px;
+    color: #6e6e6e;
+  }
+  h5 {}
+  h6 {}
+
+  /*Estilos para o bloque da cabeceira*/
+  header {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 90px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f1eb;
+    
+}
+
+/*Estilos para Sobre nós*/
+.about {
+    padding: 75px;
+    display: flex;  
+    flex-direction: row;
+    background-color: #efe9e1;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aboutTXT {
+    width: 45%;
+}
+
+
+/*Estilos para Que facemos*/
+.facemos {
+    padding: 75px;
+    display: flex;  
+    flex-direction: row;
+    background-color: #f4f1eb;
+    justify-content: space-between;
+    width: 90%;
+   max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facemosESQ {
+    width: 34%;
+}
+
+.facemosDTA {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /*rEVISAR ISTO PARA QUE NOS SE EXPANDA TANTO*/
+}
+
+.facemosBLOQUE {
+    display: flex;
+    flex-direction: fow;
+}
+
+.facemosTXT {
+     padding-left: 50px;
+     padding-bottom: 30px;
+}
+
+/*Estilos para Actividades FACER UN GRID*/
+.actividades {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    background-color:  #efe9e1;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.actividade1 {
+  grid-area: actividade1;
+  padding-top: 25px;
+}
+
+.actividade2 {
+  grid-area: actividade2;
+  padding-top: 25px;
+}
+
+.actividade3 {
+  grid-area: actividade3;
+  padding-top: 25px;
+}
+
+.actividade4 {
+  grid-area: actividade4;
+   padding-top: 25px;
+}
+
+.actividade5 {
+  grid-area: actividade5;
+   padding-top: 25px;
+}
+
+.actividade6 {
+  grid-area: actividade6;
+   padding-top: 25px;
+}
+.gridActividades {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  grid-template-areas: 
+  "actividade1 actividade2 actividade3"
+  "actividade4 actividade5 actividade6";
+  height: 100%;
+}
+
+/*Estilos para Quen somos*/
+.somos {
+    padding: 75px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f1eb;
+}
+
+
+.persoas {
+  padding-top: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.somosESQ {
+    width: 34%;
+}
+
+.somosDTA {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+}
+
+
+/*Estilos para Pé de páxina*/
+footer {
+    padding: 75px;
+    background-color:  #efe9e1;
+    width: 90%;
+   max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
