@@ -1,177 +1,187 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*Estilos para as ligazóns*/
 a {
-    outline: none;
-    text-decoration: underline;
-    color: #302e2b;
-    font-size: 12px;
-    
+  outline: none;
+  text-decoration: underline;
+  color: #302e2b;
+  font-size: 12px;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    color: #302e2b;
-    font-size: 14px; 
-    line-height: 2;
+  font-family: "Open Sans", sans-serif;
+  color: #302e2b;
+  font-size: 14px;
+  line-height: 2;
 }
 
+/*Estilos texto*/
+h1 {
+  font-size: clamp(32px, 6vw, 56px); /*56px*/
+  line-height: 2;
+}
+h2 {
+  font-size: clamp(24px, 5vw, 36px); /*36px*/
+  line-height: 1.2;
+}
 
+.titulos-aviso-legal {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
 
- /*Estilos texto*/
- h1 {
-    font-size: 56px;
-    line-height: 120px;
-   
-  }
-  h2 {
-    font-size: 36px;
-    line-height: 1.2;
-  }
-  h3 {
-    font-size: 20px;
-    line-height: 2;
-  }
-  h4 {
-    letter-spacing: 1px;
-    color: #6e6e6e;
-  }
-  h5 {}
-  h6 {}
+h3 {
+  font-size: clamp(16px, 4vw, 20px); /*20px*/
+  line-height: 2;
+}
 
-  /*Estilos para o bloque da cabeceira*/
-  header {
-    padding-top: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 90px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f4f1eb;
-    
+h4 {
+  letter-spacing: 1px;
+  color: #424242;
+}
+
+h5 {
+  color: #6e6e6e;
+}
+
+/*Estilos para o bloque da cabeceira*/
+header {
+  padding: clamp(80px, 20vh, 200px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 90px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f1eb;
+}
+
+.logo-cabeceira {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
 }
 
 /*Estilos para Sobre nós*/
 .about {
-    padding: 75px;
-    display: flex;  
-    flex-direction: row;
-    background-color: #efe9e1;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: clamp(30px, 6vw, 75px);
+  display: flex;
+  flex-direction: row;
+  background-color: #efe9e1;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .aboutTXT {
-    width: 45%;
+  width: 45%;
 }
 
+.logo-about {
+  background-color: white;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
 
 /*Estilos para Que facemos*/
 .facemos {
-    padding: 75px;
-    display: flex;  
-    flex-direction: row;
-    background-color: #f4f1eb;
-    justify-content: space-between;
-    width: 90%;
-   max-width: 1200px;
-    margin: 0 auto;
+  padding: clamp(30px, 6vw, 75px);
+  display: flex;
+  flex-direction: row;
+  background-color: #f4f1eb;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .facemosESQ {
-    width: 34%;
+  width: 34%;
 }
 
 .facemosDTA {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /*rEVISAR ISTO PARA QUE NOS SE EXPANDA TANTO*/
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*rEVISAR ISTO PARA QUE NOS SE EXPANDA TANTO*/
 }
 
 .facemosBLOQUE {
-    display: flex;
-    flex-direction: fow;
+  display: flex;
+  flex-direction: row;
 }
 
 .facemosTXT {
-     padding-left: 50px;
-     padding-bottom: 30px;
+  padding-left: 50px;
+  padding-bottom: 30px;
 }
 
-/*Estilos para Actividades FACER UN GRID*/
+/*Estilos para Actividades*/
 .actividades {
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-top: 75px;
-    padding-bottom: 30px;
-    background-color:  #efe9e1;
-    display: flex;  
-    flex-direction: column;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: clamp(30px, 6vw, 75px);
+  background-color: #efe9e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.actividade1 {
-  grid-area: actividade1;
-  padding-top: 25px;
-}
-
-.actividade2 {
-  grid-area: actividade2;
-  padding-top: 25px;
-}
-
-.actividade3 {
-  grid-area: actividade3;
-  padding-top: 25px;
-}
-
-.actividade4 {
-  grid-area: actividade4;
-   padding-top: 25px;
-}
-
-.actividade5 {
-  grid-area: actividade5;
-   padding-top: 25px;
-}
-
-.actividade6 {
-  grid-area: actividade6;
-   padding-top: 25px;
-}
 .gridActividades {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 250px;
-  grid-template-areas: 
-  "actividade1 actividade2 actividade3"
-  "actividade4 actividade5 actividade6";
-  height: 100%;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.actividade1,
+.actividade2,
+.actividade3 {
+  overflow: hidden; /*Para que non desborde cando se fai hover na foto*/
+}
+
+.foto-actividade {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+
+  object-fit: cover;
+
+  filter: grayscale(100%) contrast(105%) brightness(92%);
+
+  transition: all 0.4s ease;
+}
+
+.foto-actividade:hover {
+  filter: grayscale(0%) contrast(100%);
+
+  transform: scale(1.05);
 }
 
 /*Estilos para Quen somos*/
 .somos {
-    padding: 75px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f4f1eb;
+  padding: clamp(30px, 6vw, 75px);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f4f1eb;
 }
-
 
 .persoas {
   padding-top: 45px;
@@ -181,26 +191,155 @@ body {
 }
 
 .somosESQ {
-    width: 34%;
+  width: 34%;
+}
+
+.persoa-padroa {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  filter: brightness(95%) sepia(10%);
+
+  transition: all 0.4s ease;
+}
+
+.persoa-padroa:hover {
+  filter: brightness(100%) sepia(20%);
+
+  transform: scale(1.05);
 }
 
 .somosDTA {
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    text-align: center;
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
+.somosDTA > p {
+  padding-bottom: 1em;
+}
+
+/*Estilos para Colabora*/
+.colabora {
+  padding: clamp(30px, 6vw, 75px);
+  background-color: #efe9e1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linea-punteada {
+  padding-top: 1em;
+  height: 10px;
+  width: 100%;
+
+  background-image: radial-gradient(circle, #302e2b 2px, transparent 2px);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+}
 
 /*Estilos para Pé de páxina*/
 footer {
-    padding: 75px;
-    background-color:  #efe9e1;
-    width: 90%;
-   max-width: 1200px;
-    margin: 0 auto;
+  padding: clamp(30px, 6vw, 75px);
+  background-color: #0a0a0a;
+  color: white;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.RRSS {
+  justify-content: center;
+  align-items: center;
 }
 
+.RRSS a {
+  padding-right: 0.5em;
+}
 
+/*Media queries*/
+@media (max-width: 900px) {
+  .about,
+  .facemos,
+  .persoas {
+    flex-direction: column;
+    gap: 30px;
+  }
 
+  .facemosDTA {
+    width: 100%;
+  }
+
+  .aboutTXT,
+  .somosESQ,
+  .somosDTA {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gridActividades {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "actividade1 actividade2"
+      "actividade3 actividade4";
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  header img {
+    width: 80%;
+  }
+
+  .about {
+    padding: 40px 20px 50px;
+    text-align: left;
+  }
+
+  .icona-about {
+    display: none;
+  }
+
+  .facemos {
+    padding: 40px 20px;
+  }
+
+  .facemosBLOQUE {
+    gap: 30px;
+  }
+
+  .facemosTXT {
+    padding-left: 0;
+  }
+
+  .gridActividades {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "actividade1"
+      "actividade2"
+      "actividade3";
+  }
+
+  .persoa-padroa {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .somosDTA {
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
