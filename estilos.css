@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open-sans-v44-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*Estilos para as ligazóns*/
 a {
   outline: none;
