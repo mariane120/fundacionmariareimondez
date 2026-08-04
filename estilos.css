@@ -1,3 +1,18 @@
+:root {
+  --color-texto: #302e2b;
+  --color-fondo-1: #f4f1eb;
+  --color-fondo-2: #efe9e1;
+
+  /* Nuevo color institucional */
+  --color-acento: #5b3758;
+
+  /* Hover */
+  --color-acento-claro: #7a5074;
+
+  /* Muy sutil */
+  --color-acento-fondo: #f7f3f8;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +35,11 @@
 
 /*Estilos para as ligazóns*/
 a {
-  outline: none;
-  text-decoration: underline;
   color: #302e2b;
-  font-size: 12px;
+}
+
+a:hover {
+  color: var(--color-acento);
 }
 
 body {
@@ -38,6 +54,7 @@ h1 {
   font-size: clamp(32px, 6vw, 56px); /*56px*/
   line-height: 2;
 }
+
 h2 {
   font-size: clamp(24px, 5vw, 36px); /*36px*/
   line-height: 1.2;
@@ -54,8 +71,8 @@ h3 {
 }
 
 h4 {
-  letter-spacing: 1px;
-  color: #424242;
+  letter-spacing: 1.5px;
+  color: var(--color-acento);
 }
 
 h5 {
@@ -98,12 +115,38 @@ header {
   margin: 0 auto;
 }
 
+.about h1 {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 0.8em;
+}
+
+.about h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -12px;
+
+  width: 60px;
+
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: var(--color-acento);
+}
+
 .aboutTXT {
   width: 45%;
 }
 
 .logo-about {
-  background-color: white;
+  background: #fbf8fb;
   border-radius: 50%;
   width: 100%;
   height: auto;
@@ -136,6 +179,14 @@ header {
 .facemosBLOQUE {
   display: flex;
   flex-direction: row;
+
+  gap: 25px;
+
+  padding-left: 25px;
+
+  border-left: 4px solid var(--color-acento);
+
+  margin-bottom: 45px;
 }
 
 .facemosTXT {
@@ -153,6 +204,15 @@ header {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.actividades h4 {
+  margin-top: 15px;
+  line-height: normal;
+}
+
+.actividades h5 {
+  margin-top: 6px;
 }
 
 .gridActividades {
@@ -174,12 +234,13 @@ header {
 
   object-fit: cover;
 
-  filter: grayscale(100%) contrast(105%) brightness(92%);
+  filter: contrast(105%) brightness(92%);
 
   transition: all 0.4s ease;
 }
 
-.foto-actividade:hover {
+.foto-actividade:hover,
+.RRSS svg:hover {
   filter: grayscale(0%) contrast(100%);
 
   transform: scale(1.05);
@@ -192,6 +253,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #f4f1eb;
+  position: relative;
 }
 
 .persoas {
@@ -208,15 +270,18 @@ header {
 .persoa-padroa {
   height: 250px;
   object-fit: cover;
+
   border-radius: 50%;
 
-  filter: brightness(95%) sepia(10%);
+  filter: contrast(102%) brightness(98%) saturate(0.92);
 
   transition: all 0.4s ease;
 }
 
 .persoa-padroa:hover {
-  filter: brightness(100%) sepia(20%);
+  filter: brightness(100%);
+
+  box-shadow: 0 0 0 4px #5b3758;
 
   transform: scale(1.05);
 }
@@ -233,6 +298,27 @@ header {
   padding-bottom: 1em;
 }
 
+/*Patrón puntos*/
+.contenedor-puntos {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 0; /* No afecta el flujo ni márgenes */
+}
+
+.patron-puntos {
+  position: absolute;
+  top: -10px; /* Axustar para subir ou baixar sobre o borde borde */
+  left: -50px;
+  width: 20%;
+  height: 80px; /* Altura de la zona con puntos */
+  background-image: radial-gradient(#5b3758 2px, transparent 1.5px);
+  background-size: 16px 16px; /* Separación entre puntos */
+  pointer-events: none; /* Permite hacer clic a través del patrón */
+  z-index: 10;
+}
+
 /*Estilos para Colabora*/
 .colabora {
   padding: clamp(30px, 6vw, 75px);
@@ -243,16 +329,24 @@ header {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
-.linea-punteada {
-  padding-top: 1em;
-  height: 10px;
-  width: 100%;
+.colabora a {
+  font-weight: 700;
 
-  background-image: radial-gradient(circle, #302e2b 2px, transparent 2px);
-  background-size: 10px 2px;
-  background-repeat: repeat-x;
+  text-decoration: none;
+
+  border-bottom: 3px dotted transparent;
+
+  padding-bottom: 2px;
+
+  transition: 0.25s;
+}
+
+.colabora a:hover {
+  color: var(--color-acento);
+  border-bottom-color: var(--color-acento);
 }
 
 /*Estilos para Pé de páxina*/
@@ -264,6 +358,33 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+footer h2 {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 0.8em;
+}
+
+footer h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -12px;
+
+  width: 60px;
+
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: var(--color-acento);
+}
+
 .RRSS {
   justify-content: center;
   align-items: center;
@@ -271,6 +392,23 @@ footer {
 
 .RRSS a {
   padding-right: 0.5em;
+}
+
+footer a {
+  color: white;
+
+  text-decoration: none;
+
+  border-bottom: 3px dotted transparent;
+
+  padding-bottom: 2px;
+
+  transition: 0.25s;
+}
+
+footer a:hover {
+  color: white;
+  border-bottom-color: white;
 }
 
 /*Media queries*/
@@ -297,6 +435,11 @@ footer {
   .somosDTA {
     width: 100%;
     text-align: center;
+  }
+
+  .about h1::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .gridActividades {
@@ -358,5 +501,10 @@ footer {
 
   footer {
     text-align: center;
+  }
+
+  footer h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
